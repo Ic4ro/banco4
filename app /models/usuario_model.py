@@ -9,15 +9,15 @@ class Usuario(Base):
     __tablename__ = "usuarios"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    nome = Column(String(250))
-    email = Column(String(250), unique=True)
-    senha = Column(String(250))
+    nome = Column(String(150))
+    email = Column(String(150), unique=True)
+    senha = Column(String(150))
 
     # Definindo atributos da classe
     def __init__(self, nome: str, email: str, senha: str)-> None:
         self.nome = nome
         self.email = email
         self.senha = senha
-        
+
 # Criando tabela no banco de dados.
 Base.metadata.create_all(bind=db)
