@@ -9,6 +9,7 @@ class UsuarioRepository:
     def salvar_usuario(self, usuario: Usuario):
         self.session.add(usuario)
         self.session.commit()
+        
 
     def pesquisar_usuario_por_email(self, email: str):
         return self.session.query(Usuario).filter_by(email=email).first()
@@ -16,6 +17,7 @@ class UsuarioRepository:
     def deletar_usuario(self, usuario: Usuario):
         self.session.delete(usuario)
         self.session.commit()
+
 
     def listar_todos_usuarios(self):
         return self.session.query(Usuario).all()
