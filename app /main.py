@@ -10,7 +10,7 @@ def main():
 
     def menu():
         while True:  # Loop para manter o menu ativo
-            print("======== SENAI =========")
+            print("\n === SENAI SOLUTION === ")
             print("1 - Adicionar usuário")
             print("2 - Pesquisar um usuário")
             print("3 - Atualizar dados de um usuário")

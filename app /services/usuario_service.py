@@ -18,7 +18,7 @@ class UsuarioService:
                 return
 
             self.repository.criar_usuario(usuario)
-            print("Usuario criado com sucesso")
+            print("\nUsuario criado com sucesso")
         except TypeError as erro:
             print(f"Erro ao salvar o usuário: {erro}")
         except Exception as erro:
@@ -31,7 +31,7 @@ class UsuarioService:
             cadastro = self.repository.pesquisar_usuario_por_email(email)
             if cadastro:
                 self.repository.deletar_usuario(cadastro)
-                print("Usuário deletado com sucesso")
+                print("\nUsuário deletado com sucesso")
                 return
            
             print("Usuário não encontrado")
@@ -51,7 +51,7 @@ class UsuarioService:
                 cadastro.senha = input("Digite a nova senha: ")
                 
                 self.repository.atualizar_usuario(cadastro)
-                print("Usuário atualizado com sucesso")
+                print("\nUsuário atualizado com sucesso")
                 return
             
             print("Usuário não encontrado")
@@ -66,7 +66,7 @@ class UsuarioService:
 
             cadastro = self.repository.pesquisar_usuario_por_email(email)
             if cadastro:
-                print("Dados do usuário: ")
+                print("\nDados do usuário cadastrado: ")
                 print(f"\n Id: {cadastro.id} | Nome: {cadastro.nome} | Email: {cadastro.email}")
                 return
             
